@@ -1,5 +1,7 @@
 # [vs](https://anvaka.github.io/vs/)
 
+尝试将搜索引擎切换成百度
+
 Visualization of google's autocomplete as a graph.
 
 ![demo](https://i.imgur.com/cItD67x.gif)
