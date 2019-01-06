@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "delaunator": "^3.0.2",
+    "lodash-es": "^4.17.11",
     "ngraph.events": "0.0.4",
     "ngraph.forcelayout": "^0.5.0",
     "ngraph.graph": "0.0.14",
