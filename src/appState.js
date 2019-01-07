@@ -17,7 +17,7 @@ const appState = {
   progress: new Progress(),
   graph: null,
   query: appStateFromQuery.query,
-  pattern: appStateFromQuery.pattern || '[query] vs ...'
+  pattern: appStateFromQuery.pattern || '[query]和...'
 }
 
 if (appState.query) {

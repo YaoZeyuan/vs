@@ -3,7 +3,7 @@ let myIndex = 0;
 /**
  * Performs JSONP request to a given url
  */
-export default function jsonpFetch(url) {
+export default async function jsonpFetch(url) {
   let isCancelled, actualResolve;
   let loadScript = null;
   const name = 'callback' + (myIndex++);
@@ -18,7 +18,8 @@ export default function jsonpFetch(url) {
     actualResolve = resolve;
 
     loadScript = document.createElement('script');
-    loadScript.src = `${url}&callback=${name}`;
+    // 百度的回掉名是cb
+    loadScript.src = `${url}&cb=${name}`;
     loadScript.onerror = reject;
     document.head.appendChild(loadScript);
   }
