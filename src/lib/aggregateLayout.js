@@ -167,7 +167,10 @@ export default function createAggregateLayout(graph, progress) {
         let mul = links ? links.length : 1;
         let node = graph.getNode(nodeId);
         mul *=  (MAX_DEPTH - node.data.depth) + 1;
-        return nodeId.length * mul;
+        // 计算质量的时候, 中文词长度普遍短于英文(google => 谷歌), 导致词汇分布过密, 乘以4即可
+        let isPureChinese = nodeId.match(/[a-zA-Z]+/) === null
+        let rate = isPureChinese ? 4 : 1
+        return nodeId.length * rate * mul;
       }
     });
   }

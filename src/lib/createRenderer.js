@@ -206,9 +206,9 @@ export default function createRenderer(progress) {
       y: -height/2,
       rx: 15 * dRatio + 2,
       ry: 15 * dRatio + 2,
-      px: -width/2 + size.spaceWidth*3,
-      py: -height/2 + fontSize * 1.1,
-      strokeWidth: 4 * dRatio + 1
+      px: -width/2 + size.spaceWidth*3, // 相对于边框左侧偏移量
+      py: -height/2 + fontSize * 1.1, // 相对于边框顶部偏移量
+      strokeWidth: 4 * dRatio + 1 // 边框厚度
     };
   }
 

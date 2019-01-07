@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <form v-on:submit.prevent="onSubmit" class="search-box">
-      <span @click.prevent="forwardFocus">Graph for</span>
+      <span @click.prevent="forwardFocus">百度关系图</span>
       <query-input
         class="query-input"
         placeholder="Enter query"
@@ -18,17 +18,13 @@
       >Go</a>
     </form>
     <div class="help" v-if="!isLoading">
-      The graph was made from Google's auto-complete.
-      <a
-        href="#"
-        @click.prevent="aboutVisible = true"
-        class="highlight"
-      >Learn more.</a>
+      根据百度智能提示自动生成
+      <a href="#" @click.prevent="aboutVisible = true" class="highlight">了解更多</a>
     </div>
     <div class="help" v-if="isLoading">{{appState.progress.message}}</div>
     <div class="about-line">
-      <a class="about-link" href="#" @click.prevent="aboutVisible = true">about</a>
-      <a class="bold" href="http://github.com/anvaka/vs">source code</a>
+      <a class="about-link" href="#" @click.prevent="aboutVisible = true">关于</a>
+      <a class="bold" href="https://github.com/YaoZeyuan/vs">源代码</a>
     </div>
 
     <about v-if="aboutVisible" @close="aboutVisible = false"></about>
