@@ -27,18 +27,21 @@
       <a class="bold" href="https://github.com/YaoZeyuan/vs">源代码</a>
     </div>
 
-    <about v-if="aboutVisible" @close="aboutVisible = false"></about>
-
+    <!-- 太长, 先不翻译了😂 -->
+    <!-- <about v-if="aboutVisible" @close="aboutVisible = false"></about> -->
     <div class="welcome" v-if="!appState.hasGraph">
-      <h3>Welcome!</h3>
+      <h3>欢迎</h3>
       <p>
-        This website renders graph of Google's auto-complete.
+        页面根据百度搜索提示自动生成,
+        原作
         <a
           class="highlight"
-          href="#"
-          @click.prevent="aboutVisible = true"
-        >Click here</a> to learn more, or
-        <a class="highlight" href="?query=iphone">try demo</a>.
+          href="https://anvaka.github.io/vs/?query="
+          target="_blank"
+        >地址</a>
+        <a class="highlight" href="#" @click.prevent="aboutVisible = true">点击了解更多</a>
+        或
+        <a class="highlight" href="?query=iphone">查看demo</a>.
       </p>
     </div>
 
