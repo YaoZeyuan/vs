@@ -4,7 +4,7 @@
       <span @click.prevent="forwardFocus">百度关系图</span>
       <query-input
         class="query-input"
-        placeholder="Enter query"
+        placeholder="输入 贝壳找房 试下?"
         v-model="appState.query"
         :pattern="appState.pattern"
         ref="queryInput"
