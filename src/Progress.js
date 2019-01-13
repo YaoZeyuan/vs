@@ -17,24 +17,24 @@ export default class Progress {
   }
 
   startDownload() {
-    this.phase = 'download';
+    this.phase = '检索中';
   }
 
   startLayout() {
-    this.message = 'Finished download. Constructing layout...';
+    this.message = '检索完成, 开始生成关系图...';
     this.phase = 'layout';
   }
 
   setLayoutCompletion(layoutCompletion) {
     if (this.phase === 'layout') {
-      this.message = `Finished download. Constructing layout ${layoutCompletion}%...`;
+      this.message = `检索完成. 生成关系图 ${layoutCompletion}%...`;
     }
   }
 
   updateLayout(remaining, nextWord) {
     this.download.currentWord = nextWord;
     this.download.remaining = remaining;
-    this.message = `Remaining: ${remaining}. Downloading ${nextWord}`;
+    this.message = `剩余: ${remaining}.搜索 ${nextWord}`;
   }
 
   done() {
