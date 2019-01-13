@@ -83,7 +83,9 @@ export default {
       this.$refs.queryInput.focus();
     },
     onSubmit() {
-      if (!appState.query) return;
+      if (!appState.query) {
+        appState.query = "贝壳找房";
+      }
 
       performSearch(appState.query);
       this.renderer.render(appState.graph);
@@ -247,6 +249,7 @@ a {
   font-size: 16px;
   padding: 0 0 0 8px;
   cursor: text;
+  margin: 2vh 0 0 0;
 
   a {
     color: #B2B2B2;
