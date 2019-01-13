@@ -18,30 +18,28 @@
       >Go</a>
     </form>
     <div class="help" v-if="!isLoading">
-      根据百度智能提示自动生成
-      <a href="#" @click.prevent="aboutVisible = true" class="highlight">了解更多</a>
+      <p>
+        基于
+        <a href="https://github.com/YaoZeyuan/vs" target="_blank">https://anvaka.github.io/vs</a>
+        改造完成
+      </p>
     </div>
     <div class="help" v-if="isLoading">{{appState.progress.message}}</div>
     <div class="about-line">
-      <a class="about-link" href="#" @click.prevent="aboutVisible = true">关于</a>
-      <a class="bold" href="https://github.com/YaoZeyuan/vs">源代码</a>
+      <!-- 右侧提示栏 -->
     </div>
 
     <!-- 太长, 先不翻译了😂 -->
     <!-- <about v-if="aboutVisible" @close="aboutVisible = false"></about> -->
     <div class="welcome" v-if="!appState.hasGraph">
-      <h3>欢迎</h3>
+      <p>页面内容根据百度搜索提示自动生成</p>
       <p>
-        页面根据百度搜索提示自动生成,
-        原作
+        原项目:
         <a
           class="highlight"
           href="https://anvaka.github.io/vs/?query="
           target="_blank"
-        >地址</a>
-        <a class="highlight" href="#" @click.prevent="aboutVisible = true">点击了解更多</a>
-        或
-        <a class="highlight" href="?query=iphone">查看demo</a>.
+        >https://anvaka.github.io/vs</a>
       </p>
     </div>
 
