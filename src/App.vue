@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <form v-on:submit.prevent="onSubmit" class="search-box">
-      <span @click.prevent="forwardFocus">百度关系图</span>
       <query-input
         class="query-input"
         placeholder="输入 贝壳找房 试下?"
@@ -32,9 +31,10 @@
     <!-- 太长, 先不翻译了😂 -->
     <!-- <about v-if="aboutVisible" @close="aboutVisible = false"></about> -->
     <div class="welcome" v-if="!appState.hasGraph">
-      <p>页面内容根据百度搜索提示自动生成</p>
+      <p>百度关系图:根据百度提示自动生成</p>
+      <p></p>
       <p>
-        原项目:
+        原项目地址:
         <a
           class="highlight"
           href="https://anvaka.github.io/vs/?query="
@@ -248,6 +248,8 @@ a {
   padding: 0 0 0 8px;
   cursor: text;
   margin: 2vh 0 0 0;
+  /* 适配移动端 */
+  max-width: 66vw;
 
   a {
     color: #B2B2B2;
