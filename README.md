@@ -1,4 +1,4 @@
-# [vs](https://anvaka.github.io/vs/)
+# [vs](https://www.yaozeyuan.online/vs/)
 
 尝试将搜索引擎切换成百度
 
